@@ -40,7 +40,7 @@ where:
 - `ω` is the angular velocity
 - `t` is time
 
-The implementation generates many independent Wiener-process trajectories and multiplies each trajectory by a sinusoidal term. :chatgpt-content-reference{index="0"}
+The implementation generates many independent Wiener-process trajectories and multiplies each trajectory by a sinusoidal term. 
 
 The angular velocity is set to:
 
@@ -48,7 +48,7 @@ The angular velocity is set to:
 ω = 0.2
 ```
 
-and the simulation uses 300 trajectories over 100 units of time. :chatgpt-content-reference{index="1"}
+and the simulation uses 300 trajectories over 100 units of time. 
 
 The Wiener process is generated using increments of the form:
 
@@ -56,7 +56,7 @@ The Wiener process is generated using increments of the form:
 dW = sqrt(dt) * N(0,1)
 ```
 
-which are accumulated over time. :chatgpt-content-reference{index="2"}
+which are accumulated over time. 
 
 The resulting stochastic process is then calculated as:
 
@@ -64,7 +64,7 @@ The resulting stochastic process is then calculated as:
 Y(t) = W(t) sin(ωt)
 ```
 
-and plotted for all simulated trajectories. :chatgpt-content-reference{index="3"}
+and plotted for all simulated trajectories. 
 
 ## Snow Accumulation Model
 
@@ -81,7 +81,7 @@ where:
 - `X0` is the initial amount of snow
 - `a` represents the average snowfall rate
 - `c` controls the strength of random fluctuations
-- `W(t)` is a Wiener process :chatgpt-content-reference{index="4"}
+- `W(t)` is a Wiener process 
 
 The simulation parameters are:
 
@@ -91,7 +91,7 @@ a  = 0.2
 c  = 0.8
 ```
 
-The model is simulated over 100 time units using 500 time steps and 300 independent trajectories. :chatgpt-content-reference{index="5"}
+The model is simulated over 100 time units using 500 time steps and 300 independent trajectories. 
 
 At each time step, the process is updated using:
 
@@ -105,7 +105,7 @@ where:
 dW = sqrt(dt) * N(0,1)
 ```
 
-represents a Wiener-process increment. :chatgpt-content-reference{index="6"}
+represents a Wiener-process increment. 
 
 The model also includes the physical condition that the amount of snow cannot become negative:
 
@@ -114,7 +114,7 @@ if X[n+1] < 0:
     X[n+1] = 0
 ```
 
-:chatgpt-content-reference{index="7"}
+
 
 ## Wiener Process
 
@@ -138,7 +138,6 @@ In the code, this is implemented as:
 dW = np.sqrt(dt) * np.random.randn()
 ```
 
-:chatgpt-content-reference{index="8"}
 
 ## Visualization
 
@@ -146,7 +145,7 @@ Both simulations generate multiple stochastic trajectories and display them usin
 
 This makes it possible to observe how the same stochastic model can produce many different outcomes due to random variation.
 
-For example, the snow model plots 300 independent realizations of the snow accumulation process. :chatgpt-content-reference{index="9"}
+For example, the snow model plots 300 independent realizations of the snow accumulation process. 
 
 ## Technologies
 
